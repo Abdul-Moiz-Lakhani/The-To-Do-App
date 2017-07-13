@@ -270,7 +270,7 @@ label
 }
 #signIn_div
 {
-    display: none;
+    display: block;
     animation-name: example;
     animation-duration: 2s;
     animation-direction: ease-out;
@@ -280,7 +280,7 @@ label
 
 #addWork_div
 {
-    display: none;
+    display: block;
     height: 357px;
     text-align: center;
     animation-name: example;
@@ -322,12 +322,16 @@ label
 {
     margin-top: 30px;
 }
+#getWork
+{
+    text-align: center;
+}
 
 /* Work List Div CSS */
 
 #WorkList_div
 {
-    display: none;
+    display: block;
     height: 357px;
     text-align: center;
     animation-name: example;
@@ -357,40 +361,56 @@ label
 #edit
 {
     float: right;
-    width: 30px;
-    height: 30px;
-    background-color: orange;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
     margin-top: 0px;
+    margin-right: 2px;
+    cursor: pointer;
 }
 #edit img
 {
     width: 20px;
     height: 20px;
-    margin-top: 4px;
+    margin-top: 7px;
 }
 #del
 {
     float: right;
-    width: 30px;
-    height: 30px;
-    background-color: orange;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
     margin-top: 0px;
+    cursor: pointer;
 }
 #del img
 {
     width: 20px;
     height: 20px;
-    margin-top: 4px;
+    margin-top: 7px;
 }
+
+#checkImage
+{
+    width: 20px;
+    height: 20px;
+    margin-top: 7px;
+}
+
 #innerText
 {
+    width: 142px;
+    height: 29px;
     float: left;
-    margin-top: 2px;
-    margin-left: 5px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
+    margin-left: 15px;
+    margin-top: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
     font-weight: normal;
-    color: orange;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 #opacbox3
 {
@@ -417,11 +437,42 @@ label
     font-weight: normal;
     font-size: 18px;
 }
-#delThis:hover
+
+#listBullet 
 {
+    width: inherit;
+    height: 35px;
+    /* border: 1px solid black; */
+}
+
+#circle
+{
+    width: 35px;
+    height: 35px;
+    background-color: orange;
+    border-radius: 100%;
     cursor: pointer;
 }
-#editText:hover
+
+#bullet
 {
-    cursor: pointer;
+    float: right;
+    margin-right: 3%;
+    margin-top: -35px;
+    width: 83%;
+    height: 35px;
+    background-color: lightcoral;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#bullet::before
+{
+    position: absolute;
+    content:"";
+    width: 1px;
+    height: 35px;
+    border-right: 10px solid white;
+    border-radius: 100%;
+    margin-left: -120px;
 }
